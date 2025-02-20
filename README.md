@@ -1,3 +1,18 @@
+# example to pack singularity:
+
+    $ wget https://github.com/diyism/packelf/raw/refs/heads/master/packelf.sh
+    $ chmod 777 packelf.sh
+    $ cp /usr/bin/singularity ./sing
+    $ ./packelf.sh ./sing sing.libs
+    $ tar -czf sing.tar.gz sing sing.libs/
+    $ scp sing.tar.gz user@myvps:/home/user/
+
+    # on my vps:
+    $ tar xvf sing.tar.gz
+    $ mv sing sing.libs /anywhere/
+    $ cd /anywhere/
+    $ ./sing --help
+
 # packelf
 Packing Linux ELF program and it's dependencies libraries into standalone executable
 
@@ -27,18 +42,3 @@ This example will packing python and it's dependencies libraries into folder
 
     $ cp /usr/bin/python .
     $ ./packelf.sh ./python libs
-
-# example to pack singularity:
-
-    $ wget https://github.com/diyism/packelf/raw/refs/heads/master/packelf.sh
-    $ chmod 777 packelf.sh
-    $ cp /usr/bin/singularity ./sing
-    $ ./packelf.sh ./sing sing.libs
-    $ tar -czf sing.tar.gz sing sing.libs/
-    $ scp sing.tar.gz user@myvps:/home/user/
-
-    # on my vps:
-    $ tar xvf sing.tar.gz
-    $ mv sing sing.libs /anywhere/
-    $ cd /anywhere/
-    $ ./sing --help
