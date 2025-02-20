@@ -28,3 +28,10 @@ This example will packing python and it's dependencies libraries into folder
     $ cp /usr/bin/python .
     $ ./packelf.sh ./python libs
 
+# example to pack singularity:
+
+    $ wget https://github.com/diyism/packelf/raw/refs/heads/master/packelf.sh
+    $ cp /usr/bin/singularity ./
+    $ ./packelf.sh ./singularity libs
+    $ mv singularity sing
+    $ tar -czf sing.tar.gz sing libs/
