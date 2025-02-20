@@ -6,7 +6,7 @@
     $ cp /usr/bin/singularity ./sing
     $ ./packelf.sh ./sing sing.libs
     $ tar -czf sing.tar.gz sing sing.libs/
-    $ scp sing.tar.gz user@myvps:/home/user/
+    $ scp sing.tar.gz user@my_x64_vps:/home/user/
 
     # on my vps:
     $ tar xvf sing.tar.gz
