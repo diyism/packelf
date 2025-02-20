@@ -39,4 +39,6 @@ This example will packing python and it's dependencies libraries into folder
 
     # on my vps:
     $ tar xvf sing.tar.gz
+    $ mv sing sing.libs /anywhere/
+    $ cd /anywhere/
     $ ./sing --help
