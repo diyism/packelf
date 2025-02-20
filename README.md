@@ -32,7 +32,11 @@ This example will packing python and it's dependencies libraries into folder
 
     $ wget https://github.com/diyism/packelf/raw/refs/heads/master/packelf.sh
     $ chmod 777 packelf.sh
-    $ cp /usr/bin/singularity ./
-    $ ./packelf.sh ./singularity libs
-    $ mv singularity sing
+    $ cp /usr/bin/singularity ./sing
+    $ ./packelf.sh ./sing libs
     $ tar -czf sing.tar.gz sing libs/
+    $ scp sing.tar.gz user@myvps:/home/user/
+
+    # on my vps:
+    $ tar xvf sing.tar.gz
+    $ ./sing --help
