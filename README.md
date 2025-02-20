@@ -1,4 +1,6 @@
 # example to pack singularity:
+    $ sudo apt install singularity-container
+
     $ wget https://github.com/diyism/packelf/raw/refs/heads/master/packelf.sh
     $ chmod 777 packelf.sh
     $ cp /usr/bin/singularity ./sing
