@@ -1,6 +1,11 @@
 # example to pack singularity:
     $ sudo apt install singularity-container
 
+    $ git clone https://github.com/NixOS/patchelf
+    $ ./bootstrap.sh
+    $ ./configure --prefix=/usr
+    $ make && sudo make install
+
     $ wget https://github.com/diyism/packelf/raw/refs/heads/master/packelf.sh
     $ chmod 777 packelf.sh
     $ cp /usr/bin/singularity ./sing
