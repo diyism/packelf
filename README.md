@@ -1,4 +1,4 @@
-# example to pack singularity:
+# example to pack singularity (更简单的项目是 https://github.com/diyism/notroot):
     $ sudo apt install singularity-container
 
     $ git clone https://github.com/NixOS/patchelf
